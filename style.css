@@ -10,7 +10,7 @@ body {
 .container{
     display: flex;
 }
-i{
+.nav-options i{
     color: #3182ce;
 }
 .navbar {
