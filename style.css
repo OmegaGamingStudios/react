@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('bg.png');
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+}
+i{
+    color: #3182ce;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #000000;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 90vh;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.nav-options {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-options li {
+    margin: 30px 0;
+}
+
+.nav-options a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 15px 40px 15px 10px;
+}
+
+.nav-options a.active{
+    border-radius: 10px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Existing Navbar CSS (from previous conversation) */
+
+.content {
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table-box {
+    border-top-right-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+
+}
+
+thead {
+    
+    color: #A0AEC0;
+    background-color: rgb(247, 250, 252);
+}
+
+thead th {
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.header_content{
+    display: flex;
+}
+
+.heading_content{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+}
+
+.heading_content.active_text{
+    background-color: white;
+}
+.heading_content h1{
+    font-size: 15px;
+    
+}
+
+
+/* Add more CSS styling as needed for icons and other elements in the table */
+/* Styles for the section container */
+.hero_top {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Space between text and icons */
+    padding: 10px;
+}
+
+/* Styles for the heading on the left */
+.hero_text {
+    flex: 1; /* Expand to take available space */
+    font-size: 34px;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-left: 15px;
+    margin-top: 10px;
+
+}
+
+/* Styles for the icon container on the right */
+.hero_right {
+    display: flex; /* Create a row layout for icons */
+    align-items: center; /* Vertically center icons */
+    margin-right: 70px;
+    gap: 10px;
+}
+
+/* Styles for individual icons */
+.hero_icon {
+    margin-left: 10px; /* Add spacing between icons */
+    padding: 5px;
+    font-size: 22px;
+    color: white;
+}
+
+
+.detail_icon i{
+    color: #2178c0;
+}
+
+.account-section {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.account-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.account-heading {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.account-details {
+    margin-top: 20px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.label {
+    font-size: 14px;
+    color: #555;
+    flex: 1;
+    text-align: left;
+}
+
+.value {
+    font-size: 16px;
+    font-weight: bold;
+    flex: 2;
+    text-align: left;
+}

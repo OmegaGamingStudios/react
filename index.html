@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+<script src="https://kit.fontawesome.com/62872497bf.js" crossorigin="anonymous"></script>
+
+    <title>React</title>
+</head>
+<body>
+
+    <div class="container">
+    <div class="navbar">
+        <h1>Argon</h1>
+        <ul class="nav-options">
+            <li><a href="#" class="active"><i class="fa-solid fa-house" style="margin-right: 10px;"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fa-solid fa-signal" style="margin-right: 10px;" ></i>Signals</a></li>
+            <li><a href="#" > <i class="fa-solid fa-gears" style="margin-right: 10px;" ></i> Configurator</a></li>
+            <li><a href="#" > <i class="fa-solid fa-magnifying-glass" style="margin-right: 10px;" ></i> Analysis</a></li>
+            <li><a href="#" > <i class="fa-solid fa-life-ring" style="margin-right: 10px;" ></i>Help Center</a></li>
+        </ul>
+    </div>
+<div style="flex: 1;">
+    <section class="hero_top">
+        <div class="hero_text">Dashboard</div>
+    <div class="hero_right">
+        <div class="hero_icon"><i class="fa-solid fa-user"></i></div>
+        <div class="hero_icon"><i class="fa-solid fa-gear"></i></div>
+        <div class="hero_icon"><i class="fa-solid fa-bell"></i></div>
+    </div>
+    </section>
+
+    <section class="content">
+        <div class="header_content">
+        <div class="heading_content active_text">
+            <h1>Accounts</h1>
+        </div>
+        <div class="heading_content">
+            <h1>Trades</h1>
+                </div>
+        <div class="heading_content">
+            <h1>History</h1>
+        </div>
+    </div>
+        <div class="table-box">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Account</th>
+                        <th>MT</th>
+                        <th>Balance</th>
+                        <th>Equity</th>
+                        <th>Equity %</th>
+                        <th>Open Traders</th>
+                        <th>Pending</th>
+                        <th>Day</th>
+                        <th>Week</th>
+                        <th>Month</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa-solid fa-check"></i></td>
+                        <td>John Doe</td>
+                        <td>$500.00</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="detail_icon">
+                            <i class="fa-solid fa-square-poll-vertical fa-xl"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-check"></i></td>
+                        <td>John Doe</td>
+                        <td>$500.00</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td class="detail_icon">
+                            <i class="fa-solid fa-square-poll-vertical fa-xl"></i>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="account-section" style="display: none;">
+        <div class="account-box">
+            <h1 class="account-heading">Account Details</h1>
+            <div class="account-details">
+                <div class="detail-row">
+                    <label for="name" class="label">Name:</label>
+                    <span id="name" class="value">John Doe</span>
+                </div>
+                <div class="detail-row">
+                    <label for="age" class="label">Age:</label>
+                    <span id="age" class="value">30</span>
+                </div>
+                <div class="detail-row">
+                    <label for="balance" class="label">Balance:</label>
+                    <span id="balance" class="value">$1,000.00</span>
+                </div>
+                <!-- Add more details as needed -->
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const headingContents = document.querySelectorAll(".heading_content");
+    const tableBox = document.querySelector(".table-box");
+
+    headingContents.forEach((headingContent) => {
+        headingContent.addEventListener("click", function() {
+            // Remove the "active_text" class from all elements
+            headingContents.forEach((element) => {
+                element.classList.remove("active_text");
+            });
+
+            // Add the "active_text" class to the clicked element
+            this.classList.add("active_text");
+
+            // Check if the clicked heading is "Accounts"
+            if (this.querySelector("h1").textContent === "Accounts") {
+                tableBox.style.borderTopLeftRadius = "0"; // Remove the border radius
+            } else {
+                tableBox.style.borderTopLeftRadius = "15px"; // Add the border radius
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navOptions = document.querySelectorAll(".nav-options li");
+
+    navOptions.forEach((option) => {
+        option.addEventListener("click", function() {
+            // Remove the "active" class from all options
+            navOptions.forEach((item) => {
+                item.querySelector("a").classList.remove("active");
+            });
+
+            // Add the "active" class to the clicked option's anchor tag
+            this.querySelector("a").classList.add("active");
+        });
+    });
+});
+
+
+</script>
+</html>
